@@ -4,8 +4,6 @@ import { postEvents } from './getData.js'
 import { btnAddEvent } from "./components/formRecovery.js";
 
 
-postEvents(testObject);
+postEvents();
 getEvents();
 btnAddEvent();
-
-
