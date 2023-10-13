@@ -1,13 +1,39 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="./script/main.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite App</title>
+</head>
+
+<body>
+  <header>
+
+    <h1>Didlydoo</h1>
+
+    <button>ADD an event</button>
+
+    <form id="addEvent">
+
+
+      <input name="title" type="text" id="eventTitle" placeholder="Title">
+
+
+      <textarea name="description" type="text" id="description" placeholder="Description"></textarea>
+
+
+      <input name="date" type="date" id="eventDate">
+
+      <a href="#">+</a>
+
+      <button>Send</button>
+
+    </form>
+
+  </header>
+  <script type="module" src="./script/main.js"></script>
+</body>
+
 </html>
