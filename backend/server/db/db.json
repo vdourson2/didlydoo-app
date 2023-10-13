@@ -1,5 +1,53 @@
 [
   {
+    "id": "e11bcc77987d",
+    "name": "Test POST db",
+    "author": "Virginie",
+    "description": "I try to post a new event on the API",
+    "dates": [
+      "2023-03-17",
+      "2024-03-18",
+      "2024-03-21",
+      "2024-03-22"
+    ],
+    "created_at": "2023-10-13T14:35:45.865Z",
+    "num_modification": 0,
+    "last_modification": "2023-10-13T14:35:45.865Z",
+    "attendees": []
+  },
+  {
+    "id": "86646c5ec4ec",
+    "name": "Test POST db",
+    "author": "Virginie",
+    "description": "I try to post a new event on the API",
+    "dates": [
+      "2023-03-17",
+      "2024-03-18",
+      "2024-03-21",
+      "2024-03-22"
+    ],
+    "created_at": "2023-10-13T14:35:39.342Z",
+    "num_modification": 0,
+    "last_modification": "2023-10-13T14:35:39.342Z",
+    "attendees": []
+  },
+  {
+    "id": "ede926ff3c00",
+    "name": "Test POST db",
+    "author": "Virginie",
+    "description": "I try to post a new event on the API",
+    "dates": [
+      "2023-03-17",
+      "2024-03-18",
+      "2024-03-21",
+      "2024-03-22"
+    ],
+    "created_at": "2023-10-13T14:35:38.412Z",
+    "num_modification": 0,
+    "last_modification": "2023-10-13T14:35:38.412Z",
+    "attendees": []
+  },
+  {
     "id": "4869d249ef3c",
     "name": "Test POST db",
     "author": "Virginie",
