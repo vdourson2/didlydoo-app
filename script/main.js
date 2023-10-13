@@ -17,5 +17,6 @@ let testObject = {
 
 postEvents(testObject);
 getEvents();
-import "/styles/style.scss";
-import { btnAddEvent } from "./components/formRecovery.js";
+btnAddEvent();
+
+
