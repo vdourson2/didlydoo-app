@@ -15,5 +15,5 @@ let testObject = {
   ],
 };
 
-postEvents(testObject);
+//postEvents(testObject);
 getEvents();
