@@ -6,13 +6,14 @@
 //Le deuxième argument représente l'id si le 1er argument est "events",
 //et il représente le nom si le 1er argument est "attendees".
 //La valeur de cet argument par défaut est vide, c'est à dire que la fonction renvoie la liste de tous les events
-
+import { displayEvent } from "../function/displayEvent.js";
 
 export async function getData(sortOf = "events", id = ""){
     try{
         let promise = await fetch(`http://localhost:3000/api/${sortOf}/${id}`);
         let eventList = await promise.json();
         console.log(eventList);
+        displayEvent(eventList);
         return eventList
     }
     catch (error){
