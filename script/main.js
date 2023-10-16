@@ -6,11 +6,13 @@ import { postEvents } from "./getData.js";
 import { superBtn } from "./components/formRecovery.js";
 import { addEvent } from './addEvent.js'
 import { date } from './newDates.js';
+import { displayEvent } from "./function/displayEvent.js";
+
 
 postEvents();
 getEvents();
-//add();
-//send();
-superBtn();
-date();
-addEvent();
+add();
+send();
+btnAddEvent();
+displayEvent();
+

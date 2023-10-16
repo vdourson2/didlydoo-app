@@ -1,10 +1,12 @@
+import { displayEvent } from "./function/displayEvent";
+
 //Cette fonction réculpère la liste de tous les events stockés dans l'API
 export async function getEvents(){
     try{
         let promise = await fetch('http://localhost:3000/api/events/');
         let eventList = await promise.json();
         console.log(eventList);
-        //Appeler la fonction display de Mathias
+        displayEvent(eventList);
     }
     catch (error){
         console.log('Impossible de récupérer les données', error);
