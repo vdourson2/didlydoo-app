@@ -10,8 +10,10 @@ import { date } from './newDates.js';
 
 postEvents();
 getEvents();
-add();
-send();
-btnAddEvent();
+//add();
+//send();
+date();
+addEvent();
+superBtn();
 displayEvent();
 
