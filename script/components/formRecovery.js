@@ -20,13 +20,21 @@ const superBtn = () => {
       event.date.push(new Date(date.trim()));
     });
 
-    if (event.name.length > 256 || event.description.length > 256) {
+    if (
+      event.name.length > 256 ||
+      event.author.length > 256 ||
+      event.description.length > 256
+    ) {
       alert(
-        "Le nom et la description de l'évènement ne doivent pas dépasser 256 caractères"
+        "Le nom, la description et le nom de l'auteur de l'évènement ne doivent pas dépasser 256 caractères"
       );
-    } else if (event.name.length < 3 || event.description.length < 3) {
+    } else if (
+      event.name.length < 3 ||
+      event.author.length < 3 ||
+      event.description.length < 3
+    ) {
       alert(
-        "Le nom et la description de l'évènement doivent contenir au moins 3 caractères"
+        "Le nom, la description et le nom de l'auteur de l'évènement doivent contenir au moins 3 caractères"
       );
     } else {
       //methode post

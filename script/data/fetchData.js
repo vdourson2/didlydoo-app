@@ -1,4 +1,3 @@
-
 //Si aucun argument n'est passé à la fonction, cette fonction récupère la liste de 
 //tous les events stockés dans l'API et lance l'affichage des données.
 //Le premier argument représente le type de données que l'on souhaite récupérer : "events" ou "attendees"
@@ -6,7 +5,7 @@
 //Le deuxième argument représente l'id si le 1er argument est "events",
 //et il représente le nom si le 1er argument est "attendees".
 //La valeur de cet argument par défaut est vide, c'est à dire que la fonction renvoie la liste de tous les events
-import { displayEvent } from "../function/displayEvent.js";
+import { displayEvent } from "./function/displayEvent";
 
 export async function getData(sortOf = "events", id = ""){
     try{
