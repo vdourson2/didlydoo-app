@@ -1,6 +1,6 @@
 import "/styles/style.scss";
-import { getEvents } from "./getData.js";
-import { postEvents } from "./getData.js";
+import { getEvents } from "./fetchData.js";
+import { postEvents } from "./fetchData.js";
 //import { add } from "./addEvent.js";
 //import { send } from "./addEvent.js";
 import { superBtn } from "./components/formRecovery.js";
