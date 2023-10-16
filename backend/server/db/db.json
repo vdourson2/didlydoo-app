@@ -1,20 +1,5 @@
 [
-  {
-    "id": "000f84010547",
-    "name": "Test POST db",
-    "author": "Virginie",
-    "description": "I try to post a new event on the API",
-    "dates": [
-      "2023-03-17",
-      "2024-03-18",
-      "2024-03-21",
-      "2024-03-22"
-    ],
-    "created_at": "2023-10-16T12:09:39.059Z",
-    "num_modification": 0,
-    "last_modification": "2023-10-16T12:09:39.059Z",
-    "attendees": []
-  },
+
   {
     "id": "4869d249ef3c",
     "name": "Test POST db",
