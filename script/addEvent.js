@@ -1,5 +1,5 @@
 
-// export function addEvent() {
+export function addEvent() {
     // Sélectionner le bouton par son ID
     const add = document.getElementById('addEvent');
     //sélecttionner la div modal par son ID
@@ -18,6 +18,8 @@
         // Cacher le modal 
         modal.style.display = 'none';
     });
-// }
-export { add }
-export { send }
+}
+// export { add }
+// export { send }
+
+
