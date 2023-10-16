@@ -14,6 +14,8 @@ getEvents();
 addEvent();
 //add();
 //send();
+date();
 btnAddEvent();
 displayEvent();
+
 
