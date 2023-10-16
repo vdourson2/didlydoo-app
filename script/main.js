@@ -4,8 +4,8 @@ import { postEvents } from "./data/fetchData.js";
 //import { add } from "./addEvent.js";
 //import { send } from "./addEvent.js";
 import { superBtn } from "./components/formRecovery.js";
-import { addEvent } from "./addEvent.js";
-import { date } from "./newDates.js";
+import { addEvent } from "./function/addEvent.js";
+import { date } from "./function/date.js";
 
 getData();
 postEvents();
