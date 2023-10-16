@@ -11,8 +11,9 @@ import { displayEvent } from "./function/displayEvent.js";
 
 postEvents();
 getEvents();
-add();
-send();
+addEvent();
+//add();
+//send();
 btnAddEvent();
 displayEvent();
 
