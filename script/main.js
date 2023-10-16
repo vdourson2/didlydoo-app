@@ -1,5 +1,5 @@
 import "/styles/style.scss";
-import { getEvents } from "./fetchtData.js";
+import { getEvents } from "./fetchData.js";
 import { postEvents } from "./fetchData.js";
 //import { add } from "./addEvent.js";
 //import { send } from "./addEvent.js";
