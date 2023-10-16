@@ -5,17 +5,18 @@
 //Le deuxième argument représente l'id si le 1er argument est "events",
 //et il représente le nom si le 1er argument est "attendees".
 //La valeur de cet argument par défaut est vide, c'est à dire que la fonction renvoie la liste de tous les events
-export async function getEvents(sortOf = "events", id = ""){
+export async function getData(sortOf = "events", id = ""){
     try{
         let promise = await fetch(`http://localhost:3000/api/${sortOf}/${id}`);
         let eventList = await promise.json();
         console.log(eventList);
         //Appeler la fonction display de Mathias ? Ou utiliser la promesse renvoyée par la fonction.
+        return eventList
     }
     catch (error){
         console.log('Impossible de récupérer les données', error);
     }
-    return eventList
+    
 }
 
 
@@ -23,7 +24,7 @@ export async function getEvents(sortOf = "events", id = ""){
 //et l'ajoute à la base de données. 
 export async function postEvents(eventObject){
     try{
-        console.log(JSON.stringify(eventObject));
+        // console.log(JSON.stringify(eventObject));
         let promise = await fetch('http://localhost:3000/api/events/',{
             method: 'POST',
             headers : {
@@ -38,4 +39,14 @@ export async function postEvents(eventObject){
     }
 }
 
-export async function  
+//Cette fonction supprime dans la db l'event dont lid est donné en argument
+export async function deleteEvent(id){
+    try{
+        let promise = await fetch(`http://localhost:3000/api/events/${id}/`,{
+            method: 'DELETE',
+        });
+    }
+    catch(error){
+        console.log("Impossible d'effacer les données : ", error);
+    }
+}
