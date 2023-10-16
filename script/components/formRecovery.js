@@ -10,7 +10,7 @@ btnAddEvent.addEventListener("click", () => {
   const event = {
     name: nameEvent.value,
     description: descriptionEvent.value,
-    // author: authorEvent.value,
+    author: authorEvent.value,
     date: [],
   };
   console.log(event.description);
