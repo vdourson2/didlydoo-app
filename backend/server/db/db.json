@@ -1,6 +1,6 @@
 [
   {
-    "id": "9229fe6acc23",
+    "id": "8bb74cb3fdb6",
     "name": "Test POST db",
     "author": "Virginie",
     "description": "I try to post a new event on the API",
@@ -10,9 +10,9 @@
       "2024-03-21",
       "2024-03-22"
     ],
-    "created_at": "2023-10-13T14:50:28.017Z",
+    "created_at": "2023-10-16T08:05:04.854Z",
     "num_modification": 0,
-    "last_modification": "2023-10-13T14:50:28.017Z",
+    "last_modification": "2023-10-16T08:05:04.854Z",
     "attendees": []
   },
   {
@@ -29,6 +29,102 @@
     "created_at": "2023-10-13T14:43:54.322Z",
     "num_modification": 0,
     "last_modification": "2023-10-13T14:43:54.322Z",
+    "attendees": []
+  },
+  {
+    "id": "680a36e32bdc",
+    "name": "Test POST db",
+    "author": "Virginie",
+    "description": "I try to post a new event on the API",
+    "dates": [
+      "2023-03-17",
+      "2024-03-18",
+      "2024-03-21",
+      "2024-03-22"
+    ],
+    "created_at": "2023-10-13T14:43:09.351Z",
+    "num_modification": 0,
+    "last_modification": "2023-10-13T14:43:09.351Z",
+    "attendees": []
+  },
+  {
+    "id": "d10b65271cb4",
+    "name": "Test POST db",
+    "author": "Virginie",
+    "description": "I try to post a new event on the API",
+    "dates": [
+      "2023-03-17",
+      "2024-03-18",
+      "2024-03-21",
+      "2024-03-22"
+    ],
+    "created_at": "2023-10-13T14:43:06.359Z",
+    "num_modification": 0,
+    "last_modification": "2023-10-13T14:43:06.359Z",
+    "attendees": []
+  },
+  {
+    "id": "dc188f043e1b",
+    "name": "Test POST db",
+    "author": "Virginie",
+    "description": "I try to post a new event on the API",
+    "dates": [
+      "2023-03-17",
+      "2024-03-18",
+      "2024-03-21",
+      "2024-03-22"
+    ],
+    "created_at": "2023-10-13T14:42:47.400Z",
+    "num_modification": 0,
+    "last_modification": "2023-10-13T14:42:47.400Z",
+    "attendees": []
+  },
+  {
+    "id": "e11bcc77987d",
+    "name": "Test POST db",
+    "author": "Virginie",
+    "description": "I try to post a new event on the API",
+    "dates": [
+      "2023-03-17",
+      "2024-03-18",
+      "2024-03-21",
+      "2024-03-22"
+    ],
+    "created_at": "2023-10-13T14:35:45.865Z",
+    "num_modification": 0,
+    "last_modification": "2023-10-13T14:35:45.865Z",
+    "attendees": []
+  },
+  {
+    "id": "86646c5ec4ec",
+    "name": "Test POST db",
+    "author": "Virginie",
+    "description": "I try to post a new event on the API",
+    "dates": [
+      "2023-03-17",
+      "2024-03-18",
+      "2024-03-21",
+      "2024-03-22"
+    ],
+    "created_at": "2023-10-13T14:35:39.342Z",
+    "num_modification": 0,
+    "last_modification": "2023-10-13T14:35:39.342Z",
+    "attendees": []
+  },
+  {
+    "id": "ede926ff3c00",
+    "name": "Test POST db",
+    "author": "Virginie",
+    "description": "I try to post a new event on the API",
+    "dates": [
+      "2023-03-17",
+      "2024-03-18",
+      "2024-03-21",
+      "2024-03-22"
+    ],
+    "created_at": "2023-10-13T14:35:38.412Z",
+    "num_modification": 0,
+    "last_modification": "2023-10-13T14:35:38.412Z",
     "attendees": []
   },
   {
