@@ -1,0 +1,15 @@
+button {
+    border: none;
+    border-radius: 10px;
+    height: 33px;
+    background: linear-gradient(145deg, #fff870, #dcd15f);
+    box-shadow: 1px 1px 2px #d9ce5d,
+        -1px -1px 2px #ffff75;
+
+    &:focus {
+
+        background: #f4e869;
+        box-shadow: inset 6px 6px 12px #d9ce5d,
+            inset -6px -6px 12px #ffff75;
+    }
+}

@@ -1,0 +1,65 @@
+#modal {
+    padding: 10px;
+    background-color: #5CD2E6;
+    width: 95%;
+    height: 250px;
+    border-radius: 10px;
+    position: absolute;
+
+    #formEvent {
+        display: grid;
+        grid-template-areas:
+            "title desc"
+            "author desc"
+            "event  date"
+            "futur send";
+        gap: 10px;
+
+        #eventTitle {
+            grid-area: title;
+            width: 150px;
+        }
+
+        #author {
+            grid-area: author;
+            width: 150px;
+        }
+
+        #description {
+            grid-area: desc;
+            width: 150px;
+        }
+
+        #eventDate {
+            grid-area: event;
+            width: 150px;
+
+        }
+
+        #addDate {
+            grid-area: date;
+
+        }
+
+        #futur-dates {
+            grid-area: futur;
+        }
+
+        #send {
+            grid-area: send;
+            width: 100px;
+
+        }
+    }
+
+    a {
+        text-decoration: none;
+        font-size: 32px;
+        font-weight: 700;
+        color: #F4E869;
+    }
+}
+
+.hidden {
+    visibility: hidden;
+}
