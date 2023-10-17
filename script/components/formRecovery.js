@@ -1,47 +1,57 @@
+// import de la fonction postEvents
+import { postEvents } from "../data/fetchData.js";
+
+// ciblage des éléments du DOM
 const nameEvent = document.getElementById("eventTitle");
 const descriptionEvent = document.getElementById("description");
 const authorEvent = document.getElementById("author");
-const dateEvent = document.querySelector("#eventDate");
+const dateEvent = document.querySelector(".date");
 const btnAddEvent = document.getElementById("send");
 
+// fonction qui récupère les valeurs des champs du formulaire
 const superBtn = () => {
+  // evenement au clic sur le bouton d'envoi du formulaire
   btnAddEvent.addEventListener("click", () => {
-    console.log();
-
-    const event = {
+    // création d'un objet contenant les valeurs des champs du formulaire
+    const eventObject = {
       name: nameEvent.value,
       description: descriptionEvent.value,
       author: authorEvent.value,
       date: [],
     };
-    console.log(event.description);
+
+    // création d'un tableau contenant les dates de l'évènement
     const datestring = dateEvent.value.split(",");
     datestring.forEach((date) => {
-      event.date.push(new Date(date.trim()));
+      eventObject.date.push(new Date(date.trim()));
     });
 
+    // vérification de la validité des données
     if (
-      event.name.length > 256 ||
-      event.author.length > 256 ||
-      event.description.length > 256
+      // verification de la longueur max des champs
+      eventObject.name.length > 256 ||
+      eventObject.author.length > 256 ||
+      eventObject.description.length > 256
     ) {
       alert(
         "Le nom, la description et le nom de l'auteur de l'évènement ne doivent pas dépasser 256 caractères"
       );
     } else if (
-      event.name.length < 3 ||
-      event.author.length < 3 ||
-      event.description.length < 3
+      // verification de la longueur min des champs
+      eventObject.name.length < 3 ||
+      eventObject.author.length < 3 ||
+      eventObject.description.length < 3
     ) {
       alert(
         "Le nom, la description et le nom de l'auteur de l'évènement doivent contenir au moins 3 caractères"
       );
     } else {
-      //methode post
-      //   return event;
-      console.log(event);
+      // envoi des données à l'API
+      // postEvents(eventObject);
+      console.log(eventObject["date"][0]);
     }
   });
 };
 
+// export de la fonction superBtn
 export { superBtn };

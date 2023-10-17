@@ -1,5 +1,4 @@
-
-const eventsContainer = document.getElementById('events-container');
+const eventsContainer = document.getElementById("events-container");
 
 function displayEvent(eventList) {
     
@@ -9,40 +8,29 @@ function displayEvent(eventList) {
         const cardEvent = document.createElement('div');
         cardEvent.classList.add('card-event');
 
-        const eventTitle = document.createElement('h3');
-        eventTitle.textContent = `Nom de l'événement ${event.name}`;
-        eventTitle.classList.add('event-title');
+    const eventTitle = document.createElement("h3");
+    eventTitle.textContent = `Nom de l'événement ${event.name}`;
+    eventTitle.classList.add("event-title");
 
-        const eventParagraph = document.createElement('p');
-        eventParagraph.textContent = `Description : ${event.description}`;
-        eventParagraph.classList.add('event-paragraph');
+    const eventParagraph = document.createElement("p");
+    eventParagraph.textContent = `Description : ${event.description}`;
+    eventParagraph.classList.add("event-paragraph");
 
-        const cardEdit = document.createElement('a');
-        cardEdit.classList.add('card-edit');
-        cardEdit.textContent = 'Modify';
-        cardEdit.setAttribute('href', `./modifyEvent.html?id=${eventID}`);
+    const cardEdit = document.createElement("a");
+    cardEdit.classList.add("card-edit");
+    cardEdit.textContent = "Modify";
+    cardEdit.setAttribute("href", `./modifyEvent.html?id=${eventID}`);
 
-
-        const eventTable = document.createElement('table');
-        eventTable.classList.add('event-table');
+    const eventTable = document.createElement("table");
+    eventTable.classList.add("event-table");
 
         const eventTableR = document.createElement('tr');
         eventTableR.classList.add('event-table-r');
-        eventTable.appendChild(eventTableR);
 
-        const eventTableR2 = document.createElement('tr');
-        eventTableR2.classList.add('event-table-r');
-        eventTable.appendChild(eventTableR2);
-
-        const eventTableR3 = document.createElement('tr');
-        eventTableR3.classList.add("event-table-r");
-        eventTable.appendChild(eventTableR3);
-
-
-        const eventTableH1 = document.createElement('th');
-        eventTableH1.classList.add('event-table-h');
-        eventTableH1.textContent = 'Nom';
-        eventTableR.appendChild(eventTableH1);
+    const eventTableH1 = document.createElement("th");
+    eventTableH1.classList.add("event-table-h");
+    eventTableH1.textContent = "Nom";
+    eventTableR.appendChild(eventTableH1);
 
         const eventTableCell = document.createElement('td');
         eventTableCell.classList.add('event-table-c');
@@ -107,4 +95,4 @@ function displayEvent(eventList) {
     });
 }
 
-export { displayEvent }; 
+export { displayEvent };
