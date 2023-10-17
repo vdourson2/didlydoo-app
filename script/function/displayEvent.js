@@ -1,7 +1,4 @@
 import { editEvent } from "./editEvent";
-
-import { deleteEvent } from "../data/fetchData";
-
 import { deleteEvent } from "../data/fetchData";
 
 const eventsContainer = document.getElementById("events-container");
