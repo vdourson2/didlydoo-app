@@ -15,7 +15,6 @@ import { date } from "./function/newDates.js";
 
 getData();
 postEvents();
-getEvents();
 addEvent();
 //add();
 //send();
