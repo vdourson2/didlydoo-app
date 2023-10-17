@@ -92,7 +92,7 @@ button {
   border-radius: 10px;
   height: 33px;
   background: linear-gradient(145deg, #fff870, #dcd15f);
-  box-shadow: 1px 1px 2px #d9ce5d, -1px -1px 2px #ffff75;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
 }
 button:focus {
   background: #f4e869;
@@ -464,6 +464,10 @@ template {
    */
 [hidden] {
   display: none;
+}
+
+body main .eventsContainer {
+  border: 1px solid black;
 }
 
 @media screen and (min-width: 612px) and (max-width: 1024px) {

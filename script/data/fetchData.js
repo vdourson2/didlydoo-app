@@ -60,27 +60,27 @@ export async function postDates(id, datesArray){
     }
 }
 
-//Cette fonction prend comme argument l'id d'un event,
-//et un objet contenant le nom d'un participant et un tableau avec ses disponibilités.
-//{ name: string, dates : [ { date: date 'YYYY-MM-DD', available: boolean (true/false) } ] }
-export async function postAttend(id, attendObject){
-    try{
-        // console.log(JSON.stringify(attendObject));
-        let promise = await fetch(`http://localhost:3000/api/events/${id}/attend`,{
-            method: 'POST',
-            headers : {
-                "Accept": "application/json; charset=UTF-8",
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(attendObject),
-        });
-        let json = await promise.json();
-        console.log(json);
-    }
-    catch(error){
-        console.log("Impossible d'ajouter les participations", error);
-    }
-}
+// //Cette fonction prend comme argument l'id d'un event,
+// //et un objet contenant le nom d'un participant et un tableau avec ses disponibilités.
+// //{ name: string, dates : [ { date: date 'YYYY-MM-DD', available: boolean (true/false) } ] }
+// export async function postAttend(id, attendObject){
+//     try{
+//         // console.log(JSON.stringify(attendObject));
+//         let promise = await fetch(`http://localhost:3000/api/events/${id}/attend`,{
+//             method: 'POST',
+//             headers : {
+//                 "Accept": "application/json; charset=UTF-8",
+//                 "Content-Type": "application/json"
+//             },
+//             body: JSON.stringify(attendObject),
+//         });
+//         let json = await promise.json();
+//         console.log(json);
+//     }
+//     catch(error){
+//         console.log("Impossible d'ajouter les participations", error);
+//     }
+// }
 
 //Cette fonction prend comme argument l'id d'un event,
 //et un objet contenant le nom d'un participant et un tableau avec ses disponibilités.
