@@ -5,6 +5,7 @@ import { deleteEvent } from "./data/fetchData.js";
 import { patchEvents } from "./data/fetchData.js";
 import { patchAttend } from "./data/fetchData.js";
 import { postDates } from "./data/fetchData.js";
+import { postAttend } from './fetchData.js'
 //import { add } from "./addEvent.js";
 //import { send } from "./addEvent.js";
 import { superBtn } from "./components/formRecovery.js";
@@ -20,3 +21,5 @@ addEvent();
 addEvent();
 date();
 superBtn();
+
+postAttend(id, attendObject)

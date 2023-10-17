@@ -19,45 +19,89 @@ export async function getData(sortOf = "events", id = "") {
   }
 }
 
-//Cette fonction prend un objet Javascript contenant un nouvel event
-//et l'ajoute à la base de données.
-export async function postEvents(eventObject) {
-  try {
-    // console.log(JSON.stringify(eventObject));
-    let promise = await fetch("http://localhost:3000/api/events/", {
-      method: "POST",
-      headers: {
-        Accept: "application/json; charset=UTF-8",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(eventObject),
-    });
-  } catch (error) {
-    console.log("Impossible d'envoyer les données", error);
-  }
+//Cette fonction prend un objet Javascript contenant un nouvel event 
+//et l'ajoute à la base de données. 
+export async function postEvents(eventObject){
+    try{
+        // console.log(JSON.stringify(eventObject));
+        let promise = await fetch('http://localhost:3000/api/events/',{
+            method: 'POST',
+            headers : {
+                "Accept": "application/json; charset=UTF-8",
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(eventObject),
+        });
+    }
+    catch(error){
+        console.log("Impossible d'envoyer les données", error);
+    }
 }
 
 //Cette fonction prend l'id d'un event comme argument
 //ainsi qu'un tableau de dates et ajoute ces dates à l'évènement
-export async function postDates(id, datesArray) {
-  try {
-    // console.log(JSON.stringify(datesArray));
-    let promise = await fetch(
-      `http://localhost:3000/api/events/${id}/add_dates`,
-      {
-        method: "POST",
-        headers: {
-          Accept: "application/json; charset=UTF-8",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(datesArray),
-      }
-    );
-    let json = await promise.json();
-    console.log(json);
-  } catch (error) {
-    console.log("Impossible d'ajouter les dates", error);
-  }
+//{ dates: array of dates ['YYYY-MM-DD'] }
+export async function postDates(id, datesArray){
+    try{
+        // console.log(JSON.stringify(datesArray));
+        let promise = await fetch(`http://localhost:3000/api/events/${id}/add_dates`,{
+            method: 'POST',
+            headers : {
+                "Accept": "application/json; charset=UTF-8",
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(datesArray),
+        });
+        let json = await promise.json();
+        console.log(json);
+    }
+    catch(error){
+        console.log("Impossible d'ajouter les dates", error);
+    }
+}
+
+//Cette fonction prend comme argument l'id d'un event,
+//et un objet contenant le nom d'un participant et un tableau avec ses disponibilités.
+//{ name: string, dates : [ { date: date 'YYYY-MM-DD', available: boolean (true/false) } ] }
+export async function postAttend(id, attendObject){
+    try{
+        // console.log(JSON.stringify(attendObject));
+        let promise = await fetch(`http://localhost:3000/api/events/${id}/attend`,{
+            method: 'POST',
+            headers : {
+                "Accept": "application/json; charset=UTF-8",
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(attendObject),
+        });
+        let json = await promise.json();
+        console.log(json);
+    }
+    catch(error){
+        console.log("Impossible d'ajouter les participations", error);
+    }
+}
+
+//Cette fonction prend comme argument l'id d'un event,
+//et un objet contenant le nom d'un participant et un tableau avec ses disponibilités.
+//{ name: string, dates : [ { date: date 'YYYY-MM-DD', available: boolean (true/false) } ] }
+export async function postAttend(id, attendObject){
+    try{
+        // console.log(JSON.stringify(attendObject));
+        let promise = await fetch(`http://localhost:3000/api/events/${id}/attend`,{
+            method: 'POST',
+            headers : {
+                "Accept": "application/json; charset=UTF-8",
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(attendObject),
+        });
+        let json = await promise.json();
+        console.log(json);
+    }
+    catch(error){
+        console.log("Impossible d'ajouter les participations", error);
+    }
 }
 
 //Cette fonction supprime dans la db l'event dont l'id est donné en argument
@@ -74,40 +118,39 @@ export async function deleteEvent(id) {
 //Cette fonction l'id d'un event comme argument,
 //ainsi qu'une donnée à remplacer pour cet event, sous forme d'un objet,
 //et remplace cette donnée dans la db
-export async function patchEvents(id, eventObject) {
-  try {
-    // console.log(JSON.stringify(eventObject));
-    let promise = await fetch(`http://localhost:3000/api/events/${id}/`, {
-      method: "PATCH",
-      headers: {
-        Accept: "application/json; charset=UTF-8",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(eventObject),
-    });
-  } catch (error) {
-    console.log("Impossible de remplacer les données de l'event", error);
-  }
+export async function patchEvents(id, eventObject){
+    try{
+        // console.log(JSON.stringify(eventObject));
+        let promise = await fetch(`http://localhost:3000/api/events/${id}/`,{
+            method: 'PATCH',
+            headers : {
+                "Accept": "application/json; charset=UTF-8",
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(eventObject),
+        });
+    }
+    catch(error){
+        console.log("Impossible de remplacer les données de l'event", error);
+    }
 }
 
 //Cette fonction prend l'id d'un event comme argument,
 //ainsi qu'un objet comprenant le nom d'un des participants,
 //et les modifications de dates à faire le concernant (suppression ou modification)
-export async function patchAttend(id, attendObject) {
-  try {
-    console.log(JSON.stringify(attendObject));
-    let promise = await fetch(
-      `http://localhost:3000/api/events/${id}/attend/`,
-      {
-        method: "PATCH",
-        headers: {
-          Accept: "application/json; charset=UTF-8",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(attendObject),
-      }
-    );
-  } catch (error) {
-    console.log("Impossible de remplacer les données de l'attend :", error);
-  }
+export async function patchAttend(id, attendObject){
+    try{
+        console.log(JSON.stringify(attendObject));
+        let promise = await fetch(`http://localhost:3000/api/events/${id}/attend/`,{
+            method: 'PATCH',
+            headers : {
+                "Accept": "application/json; charset=UTF-8",
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(attendObject),
+        });
+    }
+    catch(error){
+        console.log("Impossible de remplacer les données de l'attend :", error);
+    }
 }
