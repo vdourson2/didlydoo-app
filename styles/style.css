@@ -31,33 +31,43 @@ body button {
   position: absolute;
 }
 #modal #formEvent {
+  width: 100%;
+  height: 100%;
+  border: 1px solid red;
   display: grid;
   grid-template-areas: "title desc" "author desc" "event  date" "futur send";
   gap: 10px;
 }
 #modal #formEvent #eventTitle {
+  border: 1px solid red;
   grid-area: title;
   width: 150px;
 }
 #modal #formEvent #author {
+  border: 1px solid red;
   grid-area: author;
   width: 150px;
 }
 #modal #formEvent #description {
+  border: 1px solid red;
   grid-area: desc;
   width: 150px;
 }
 #modal #formEvent #eventDate {
+  border: 1px solid red;
   grid-area: event;
   width: 150px;
 }
 #modal #formEvent #addDate {
+  border: 1px solid red;
   grid-area: date;
 }
 #modal #formEvent #futur-dates {
+  border: 1px solid red;
   grid-area: futur;
 }
 #modal #formEvent #send {
+  border: 1px solid red;
   grid-area: send;
   width: 100px;
 }

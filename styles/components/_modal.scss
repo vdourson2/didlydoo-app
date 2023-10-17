@@ -7,6 +7,9 @@
     position: absolute;
 
     #formEvent {
+        width: 100%;
+        height: 100%;
+        border: 1px solid red;
         display: grid;
         grid-template-areas:
             "title desc"
@@ -16,36 +19,43 @@
         gap: 10px;
 
         #eventTitle {
+            border: 1px solid red;
             grid-area: title;
             width: 150px;
         }
 
         #author {
+            border: 1px solid red;
             grid-area: author;
             width: 150px;
         }
 
         #description {
+            border: 1px solid red;
             grid-area: desc;
             width: 150px;
         }
 
         #eventDate {
+            border: 1px solid red;
             grid-area: event;
             width: 150px;
 
         }
 
         #addDate {
+            border: 1px solid red;
             grid-area: date;
 
         }
 
         #futur-dates {
+            border: 1px solid red;
             grid-area: futur;
         }
 
         #send {
+            border: 1px solid red;
             grid-area: send;
             width: 100px;
 
