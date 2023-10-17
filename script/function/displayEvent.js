@@ -90,7 +90,7 @@ function displayEvent(eventList) {
             eventTable.appendChild(eventTableMemberR);
             
         }
-
+            //msss
         
 
         const eventInput = document.createElement('input');
