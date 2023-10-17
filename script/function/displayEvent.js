@@ -1,25 +1,31 @@
-const eventsContainer = document.getElementById("events-container");
+
+import { editEvent } from "./editEvent";
+
+const eventsContainer = document.getElementById('events-container');
 
 function displayEvent(eventList) {
     
     eventList.forEach(event => {
 
     let eventID = event.id;
+
     const cardEvent = document.createElement('div');
     cardEvent.classList.add('card-event');
 
     const eventTitle = document.createElement("h3");
-    eventTitle.textContent = `Nom de l'événement ${event.name}`;
+    eventTitle.textContent = `${event.name}`;
     eventTitle.classList.add("event-title");
 
     const eventParagraph = document.createElement("p");
-    eventParagraph.textContent = `Description : ${event.description}`;
+    eventParagraph.textContent = `${event.description}`;
     eventParagraph.classList.add("event-paragraph");
 
-    const cardEdit = document.createElement("a");
-    cardEdit.classList.add("card-edit");
-    cardEdit.textContent = "Modify";
-    cardEdit.setAttribute("href", `./modifyEvent.html?id=${eventID}`);
+    const cardEdit = document.createElement('img');
+    cardEdit.classList.add('card-edit');
+    cardEdit.style.width = "20px";
+    cardEdit.style.height = "20px";
+    cardEdit.addEventListener('click', (e) => editEvent(e,eventID));
+    cardEdit.setAttribute('src','icones/pencil-solid.svg')
 
     const eventTable = document.createElement("table");
     eventTable.classList.add("event-table");
@@ -62,6 +68,7 @@ function displayEvent(eventList) {
             uniqueNames.add(attendee.name); 
                 
         }
+
         const radioContainer = document.createElement('td');
         const radio1 = document.createElement('input');
         radio1.setAttribute('type', 'radio');
@@ -73,6 +80,7 @@ function displayEvent(eventList) {
         radioContainer.appendChild(radio2);
         eventTableR3.appendChild(radioContainer);
         }
+
         const uniqueNamesArray = Array.from(uniqueNames);
         for (let n = 0; n < uniqueNamesArray.length; n++) {
             const name = uniqueNamesArray[n];
@@ -82,7 +90,6 @@ function displayEvent(eventList) {
             eventTableMember.textContent = name;
             eventTableMemberR.appendChild(eventTableMember);
             eventTable.appendChild(eventTableMemberR);
-
         }
 
         const eventInput = document.createElement('input');
