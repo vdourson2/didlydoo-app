@@ -1,10 +1,10 @@
 import '/styles/style.scss'
-import { getData } from './fetchData.js'
-import { postEvents } from './fetchData.js'
-import { deleteEvent } from './fetchData.js'
-import { patchEvents } from './fetchData.js'
-import { patchAttend } from './fetchData.js'
-import { postDates } from './fetchData.js'
+import { getData } from './data/fetchData.js'
+import { postEvents } from './data/fetchData.js'
+import { deleteEvent } from './data/fetchData.js'
+import { patchEvents } from './data/fetchData.js'
+import { patchAttend } from './data/fetchData.js'
+import { postDates } from './data/fetchData.js'
 //import { add } from "./addEvent.js";
 //import { send } from "./addEvent.js";
 import { superBtn } from "./components/formRecovery.js";
@@ -15,7 +15,6 @@ import { date } from "./function/newDates.js";
 
 getData();
 postEvents();
-addEvent();
 //add();
 //send();
 addEvent();

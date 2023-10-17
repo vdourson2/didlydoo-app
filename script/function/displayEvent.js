@@ -40,9 +40,6 @@ function displayEvent(eventList) {
             eventTableR.appendChild(eventTableDate);
         }
         
-
-
-        
         const eventTableR2 = document.createElement('tr');
         eventTableR2.classList.add('event-table-r');
         
