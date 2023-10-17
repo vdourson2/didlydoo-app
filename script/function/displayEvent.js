@@ -24,8 +24,14 @@ function displayEvent(eventList) {
     const eventTable = document.createElement("table");
     eventTable.classList.add("event-table");
 
-        const eventTableR = document.createElement('tr');
-        eventTableR.classList.add('event-table-r');
+    const eventTableR = document.createElement('tr');
+    eventTableR.classList.add('event-table-r');
+
+    const eventTableR2 = document.createElement('tr');
+    eventTableR2.classList.add('event-table-r');
+
+    const eventTableR3 = document.createElement('tr');
+    eventTableR3.classList.add('event-table-r');
 
     const eventTableH1 = document.createElement("th");
     eventTableH1.classList.add("event-table-h");
