@@ -3,10 +3,12 @@
     @media screen and (min-width:612px) and (max-width:1024px) {
         display: absolute;
         left: 15%;
+        width: 70%;
     }
 
     @media screen and (min-width:1024px) {
         display: absolute;
         left: 25%;
+        width: 60%;
     }
 }

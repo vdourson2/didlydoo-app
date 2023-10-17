@@ -25,8 +25,8 @@ body button {
 #modal {
   padding: 10px;
   background-color: #5CD2E6;
-  width: 500px;
-  height: 250px;
+  width: 95%;
+  height: auto;
   border-radius: 10px;
   position: absolute;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
@@ -115,12 +115,15 @@ body {
   z-index: 1;
 }
 
+header {
+  width: 100%;
+}
 header h1 {
   text-align: center;
 }
 header .btn-add-event {
   text-align: end;
-  margin: 10px;
+  margin-right: 10%;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -475,11 +478,13 @@ body main .eventsContainer {
   #modal {
     display: absolute;
     left: 15%;
+    width: 70%;
   }
 }
 @media screen and (min-width: 1024px) {
   #modal {
     display: absolute;
     left: 25%;
+    width: 60%;
   }
 }/*# sourceMappingURL=style.css.map */
