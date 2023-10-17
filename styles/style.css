@@ -120,6 +120,7 @@ header h1 {
 }
 header .btn-add-event {
   text-align: end;
+  margin: 10px;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
