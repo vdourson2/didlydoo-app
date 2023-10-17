@@ -38,8 +38,9 @@ export async function postEvents(eventObject){
     }
 }
 
-//Cette fonction prend l'id d'un event comme argument 
+//Cette fonction prend l'id d'un event comme argument
 //ainsi qu'un tableau de dates et ajoute ces dates à l'évènement
+//{ dates: array of dates ['YYYY-MM-DD'] }
 export async function postDates(id, datesArray){
     try{
         // console.log(JSON.stringify(datesArray));
@@ -59,24 +60,45 @@ export async function postDates(id, datesArray){
     }
 }
 
-//Cette fonction supprime dans la db l'event dont l'id est donné en argument
-export async function deleteEvent(id){
+//Cette fonction prend comme argument l'id d'un event,
+//et un objet contenant le nom d'un participant et un tableau avec ses disponibilités.
+//{ name: string, dates : [ { date: date 'YYYY-MM-DD', available: boolean (true/false) } ] }
+export async function postAttend(id, attendObject){
     try{
-        let promise = await fetch(`http://localhost:3000/api/events/${id}/`,{
-            method: 'DELETE',
+        // console.log(JSON.stringify(attendObject));
+        let promise = await fetch(`http://localhost:3000/api/events/${id}/attend`,{
+            method: 'POST',
+            headers : {
+                "Accept": "application/json; charset=UTF-8",
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(attendObject),
         });
+        let json = await promise.json();
+        console.log(json);
     }
     catch(error){
-        console.log("Impossible d'effacer les données : ", error);
+        console.log("Impossible d'ajouter les participations", error);
     }
 }
 
-//Cette fonction l'id d'un event comme argument, 
+//Cette fonction supprime dans la db l'event dont l'id est donné en argument
+export async function deleteEvent(id) {
+  try {
+    let promise = await fetch(`http://localhost:3000/api/events/${id}/`, {
+      method: "DELETE",
+    });
+  } catch (error) {
+    console.log("Impossible d'effacer les données : ", error);
+  }
+}
+
+//Cette fonction l'id d'un event comme argument,
 //ainsi qu'une donnée à remplacer pour cet event, sous forme d'un objet,
 //et remplace cette donnée dans la db
 export async function patchEvents(id, eventObject){
     try{
-        // console.log(JSON.stringify(eventObject));
+        //console.log(JSON.stringify(eventObject));
         let promise = await fetch(`http://localhost:3000/api/events/${id}/`,{
             method: 'PATCH',
             headers : {
@@ -85,13 +107,15 @@ export async function patchEvents(id, eventObject){
             },
             body: JSON.stringify(eventObject),
         });
+        let json = await promise.json();
+        console.log(json);
     }
     catch(error){
         console.log("Impossible de remplacer les données de l'event", error);
     }
 }
 
-//Cette fonction prend l'id d'un event comme argument, 
+//Cette fonction prend l'id d'un event comme argument,
 //ainsi qu'un objet comprenant le nom d'un des participants,
 //et les modifications de dates à faire le concernant (suppression ou modification)
 export async function patchAttend(id, attendObject){
