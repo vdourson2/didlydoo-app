@@ -65,12 +65,23 @@ function displayEvent(eventList) {
       }
 
       const radioContainer = document.createElement("td");
+      
       const radio1 = document.createElement("input");
       radio1.setAttribute("type", "radio");
-      radio1.setAttribute("name", `avaible`); // Utilisez le nom comme identifiant unique pour les boutons radio
+      radio1.setAttribute("name", `avaible`);
+      radio1.setAttribute("value", `avaible`);
+      
       const radio2 = document.createElement("input");
       radio2.setAttribute("type", "radio");
-      radio2.setAttribute("name", `away`); // Utilisez le nom comme identifiant unique pour les boutons radio
+      radio2.setAttribute("name", `away`);
+      radio2.setAttribute("value", `away`);
+      
+      if (radio1.value === "avaible") {
+        radio1.checked = true;
+      } else if (radio2.value === "away"){
+        radio2.checked = false;
+      }
+
       radioContainer.appendChild(radio1);
       radioContainer.appendChild(radio2);
       eventTableR2.appendChild(radioContainer);
