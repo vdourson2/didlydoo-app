@@ -9,14 +9,16 @@ export function addEvent() {
 
     // Appeler un écouteur d'événement au clic sur le bouton "Add an event"
     add.addEventListener('click', () => {
-        // Afficher le modal
-        modal.style.display = 'block';
+        //enelève la class
+        modal.classList.remove('hidden');
+
     });
 
     // Ajouter un écouteur d'événement pour masquer le modal lors de l'envoi du formulaire
     send.addEventListener('click', () => {
-        // Cacher le modal 
-        modal.style.display = 'none';
+        //remet la class
+        modal.classList.add('hidden');
+
     });
 }
 // export { add }
