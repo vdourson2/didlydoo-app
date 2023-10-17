@@ -5,7 +5,6 @@ const eventsContainer = document.getElementById("events-container");
 function displayEvent(eventList) {
   eventList.forEach((event) => {
     let eventID = event.id;
-
     const cardEvent = document.createElement("div");
     cardEvent.classList.add("card-event");
 
