@@ -40,10 +40,6 @@ function displayEvent(eventList) {
             eventTableR.appendChild(eventTableDate);
         }
         
-        const member = ["dates"][1]["attendies"][0];
-        console.log(member);
-
-        
         const eventTableR2 = document.createElement('tr');
         eventTableR2.classList.add('event-table-r');
         
