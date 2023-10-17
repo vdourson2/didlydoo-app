@@ -1,6 +1,8 @@
 
 import { editEvent } from "./editEvent";
 
+import { deleteEvent } from "../data/fetchData";
+
 const eventsContainer = document.getElementById('events-container');
 
 function displayEvent(eventList) {
@@ -90,15 +92,17 @@ function displayEvent(eventList) {
             eventTable.appendChild(eventTableMemberR);
             
         }
-            //msss
         
-
         const eventInput = document.createElement('input');
         eventInput.classList.add('event-input');
         eventInput.setAttribute('type', 'text');
 
-        const eventDelButton = document.createElement("a");
-        eventDelButton.classList.add('event-btn-delete')
+        const eventDelButton = document.createElement('img');
+        eventDelButton.classList.add('event-btn-delete');
+        eventDelButton.style.width = "20px";
+        eventDelButton.style.height = "20px";
+        eventDelButton.addEventListener('click', (e) => deleteEvent(e,eventID));
+        eventDelButton.setAttribute('src','icones/trash-can-solid.svg');
 
         cardEvent.appendChild(eventTitle);
         cardEvent.appendChild(eventParagraph);
