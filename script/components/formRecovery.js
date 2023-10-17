@@ -47,8 +47,7 @@ const superBtn = () => {
       );
     } else {
       // envoi des données à l'API
-      // postEvents(eventObject);
-      console.log(eventObject["date"][0]);
+      postEvents(eventObject);
     }
   });
 };
