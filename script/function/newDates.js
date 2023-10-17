@@ -8,6 +8,7 @@
     addDate.addEventListener('click', () => {
         const newDate = document.createElement("input");
         newDate.setAttribute("type", "date");
+        newDate.classList('date');
 
 
         futurDates.appendChild(newDate);
