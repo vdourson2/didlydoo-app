@@ -67,17 +67,16 @@ function displayEvent(eventList) {
             uniqueNames.add(attendee.name); 
                 
         }
-
-        const radioContainer = document.createElement('td');
-        const radio1 = document.createElement('input');
-        radio1.setAttribute('type', 'radio');
-        radio1.setAttribute('name', `${name}-avaible`); // Utilisez le nom comme identifiant unique pour les boutons radio
-        const radio2 = document.createElement('input');
-        radio2.setAttribute('type', 'radio');
-        radio2.setAttribute('name', `${name}-away`); // Utilisez le nom comme identifiant unique pour les boutons radio
-        radioContainer.appendChild(radio1);
-        radioContainer.appendChild(radio2);
-        eventTableR3.appendChild(radioContainer);
+            const radioContainer = document.createElement('td');
+            const radio1 = document.createElement('input');
+            radio1.setAttribute('type', 'radio');
+            radio1.setAttribute('name', `${name}-avaible`); // Utilisez le nom comme identifiant unique pour les boutons radio
+            const radio2 = document.createElement('input');
+            radio2.setAttribute('type', 'radio');
+            radio2.setAttribute('name', `${name}-away`); // Utilisez le nom comme identifiant unique pour les boutons radio
+            radioContainer.appendChild(radio1);
+            radioContainer.appendChild(radio2);
+            eventTableR2.appendChild(radioContainer);
         }
 
         const uniqueNamesArray = Array.from(uniqueNames);
@@ -89,16 +88,17 @@ function displayEvent(eventList) {
             eventTableMember.textContent = name;
             eventTableMemberR.appendChild(eventTableMember);
             eventTable.appendChild(eventTableMemberR);
+            
         }
+
+        
 
         const eventInput = document.createElement('input');
         eventInput.classList.add('event-input');
         eventInput.setAttribute('type', 'text');
 
-        const eventDelButton = document.createElement("input");
+        const eventDelButton = document.createElement("a");
         eventDelButton.classList.add('event-btn-delete')
-        eventDelButton.setAttribute('type', 'button');
-        eventDelButton.setAttribute('value', 'delete');
 
         cardEvent.appendChild(eventTitle);
         cardEvent.appendChild(eventParagraph);
