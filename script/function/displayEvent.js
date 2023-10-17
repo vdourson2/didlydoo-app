@@ -4,14 +4,22 @@ const eventsContainer = document.getElementById('events-container');
 function displayEvent(eventList) {
     
     eventList.forEach(event => {
+
+        let eventID = event.id;
+
         const eventTitle = document.createElement('h3');
         eventTitle.textContent = `Nom de l'événement ${event.name}`;
         eventTitle.classList.add('event-title');
-        
 
         const eventParagraph = document.createElement('p');
         eventParagraph.textContent = `Description : ${event.description}`;
         eventParagraph.classList.add('event-paragraph');
+
+        const cardEdit = document.createElement('a');
+        cardEdit.classList.add('card-edit');
+        cardEdit.textContent = 'Modify';
+        cardEdit.setAttribute('href', `./modifyEvent.html?id=${eventID}`);
+
 
         const eventTable = document.createElement('table');
         eventTable.classList.add('event-table');
@@ -32,6 +40,10 @@ function displayEvent(eventList) {
             eventTableR.appendChild(eventTableDate);
         }
         
+        const member = ["dates"][1]["attendies"][0];
+        console.log(member);
+
+        
         const eventTableR2 = document.createElement('tr');
         eventTableR2.classList.add('event-table-r');
         
@@ -43,13 +55,14 @@ function displayEvent(eventList) {
         eventInput.classList.add('event-input');
         eventInput.setAttribute('type', 'text');
 
+
         eventTable.appendChild(eventTableR);
         eventTable.appendChild(eventTableR2);
-        eventTableR.appendChild(eventTableH1);
         eventTableR2.appendChild(eventTableCell);
 
         eventsContainer.appendChild(eventTitle);
         eventsContainer.appendChild(eventParagraph);
+        eventsContainer.appendChild(cardEdit);
         eventsContainer.appendChild(eventTable);
         eventsContainer.appendChild(eventInput);
     });
