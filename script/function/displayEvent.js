@@ -67,10 +67,10 @@ function displayEvent(eventList) {
       const radioContainer = document.createElement("td");
       const radio1 = document.createElement("input");
       radio1.setAttribute("type", "radio");
-      radio1.setAttribute("name", `${name}-avaible`); // Utilisez le nom comme identifiant unique pour les boutons radio
+      radio1.setAttribute("name", `avaible`); // Utilisez le nom comme identifiant unique pour les boutons radio
       const radio2 = document.createElement("input");
       radio2.setAttribute("type", "radio");
-      radio2.setAttribute("name", `${name}-away`); // Utilisez le nom comme identifiant unique pour les boutons radio
+      radio2.setAttribute("name", `away`); // Utilisez le nom comme identifiant unique pour les boutons radio
       radioContainer.appendChild(radio1);
       radioContainer.appendChild(radio2);
       eventTableR2.appendChild(radioContainer);
