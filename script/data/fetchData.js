@@ -98,7 +98,7 @@ export async function deleteEvent(id) {
 //et remplace cette donnée dans la db
 export async function patchEvents(id, eventObject){
     try{
-        // console.log(JSON.stringify(eventObject));
+        //console.log(JSON.stringify(eventObject));
         let promise = await fetch(`http://localhost:3000/api/events/${id}/`,{
             method: 'PATCH',
             headers : {
@@ -107,6 +107,8 @@ export async function patchEvents(id, eventObject){
             },
             body: JSON.stringify(eventObject),
         });
+        let json = await promise.json();
+        console.log(json);
     }
     catch(error){
         console.log("Impossible de remplacer les données de l'event", error);

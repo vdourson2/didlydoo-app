@@ -1,10 +1,9 @@
 [
-
   {
     "id": "8bb74cb3fdb6",
-    "name": "Test POST db",
+    "name": "Test PATCH final",
     "author": "Virginie",
-    "description": "I try to post a new event on the API",
+    "description": "Is it clean?",
     "dates": [
       "2023-03-17",
       "2024-03-18",
