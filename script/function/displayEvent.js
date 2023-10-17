@@ -70,13 +70,19 @@ function displayEvent(eventList) {
             const radioContainer = document.createElement('td');
             const radio1 = document.createElement('input');
             radio1.setAttribute('type', 'radio');
+            radio1.setAttribute('id', 'radio-green')
+            radio1.classList.add('custom-checkbox');
             radio1.setAttribute('name', `${name}-avaible`); // Utilisez le nom comme identifiant unique pour les boutons radio
             const radio2 = document.createElement('input');
             radio2.setAttribute('type', 'radio');
+            radio2.classList.add('custom-checkbox');
+            radio2.setAttribute('id', 'radio-red')
             radio2.setAttribute('name', `${name}-away`); // Utilisez le nom comme identifiant unique pour les boutons radio
             radioContainer.appendChild(radio1);
             radioContainer.appendChild(radio2);
             eventTableR2.appendChild(radioContainer);
+
+
         }
 
         const uniqueNamesArray = Array.from(uniqueNames);
@@ -108,6 +114,10 @@ function displayEvent(eventList) {
         cardEvent.appendChild(eventDelButton);
         eventsContainer.appendChild(cardEvent);
     });
+
+
 }
 
 export { displayEvent };
+
+

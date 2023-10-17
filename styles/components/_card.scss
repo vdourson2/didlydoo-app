@@ -1,14 +1,6 @@
 #events-container {
     margin: auto;
 
-    // .event-paragraph{}
-    // .card-edit{}
-    // .event-table{
-    //     .event-table-r{
-    //         .event-table-h{}
-    //         .event-table-c{}
-    //     }
-    // }
     .card-event {
         margin: 10px;
         padding: 10px;
@@ -23,7 +15,6 @@
         grid-template-rows: 1fr 1fr 1fr 1fr;
 
         .event-title {
-            border: 1px solid purple;
             grid-column: 1/2;
             grid-row: 1/2;
             text-align: center;
@@ -38,29 +29,63 @@
         }
 
         .card-edit {
-            border: 1px solid purple;
             grid-column: 2/3;
             grid-row: 1/2;
             align-self: center;
         }
 
         .event-table {
-            border: 1px solid purple;
             grid-column: 1/3;
             grid-row: 3/4;
+            color: #F4E869;
+            text-align: center;
+            width: 90%;
+            margin: auto;
+
+            .event-table-h {
+                border-bottom: 1px solid #FAF2D3;
+                border-right: 1px solid #FAF2D3;
+
+
+
+                // #radio-green {
+                //     background-color: red;
+                //     border: 2px solid red;
+
+                // }
+
+                // #radio-red {
+                //     background-color: green;
+                //     border: 2px solid green;
+                // }
+
+                // #radio-green:checked {
+                //     background-color: red;
+                //     border: 2px solid red;
+
+                // }
+
+                // #radio-red:checked {
+                //     background-color: green;
+                //     border: 2px solid green;
+                // }
+
+            }
         }
 
         .event-input {
-            border: 1px solid purple;
             grid-column: 1/2;
             grid-row: 4/5;
-            height: 30px;
+            height: 25px;
+            width: 100px;
+            margin-top: 10px;
+            margin-left: 5%;
         }
 
         .event-btn-delete {
-            border: 1px solid purple;
             grid-column: 2/3;
             grid-row: 4/5;
+            align-self: center;
         }
     }
 }
