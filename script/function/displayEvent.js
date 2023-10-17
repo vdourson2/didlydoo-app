@@ -87,33 +87,30 @@ function displayEvent(eventList) {
       radioContainer.appendChild(radio2);
       eventTableR2.appendChild(radioContainer);
 
-
     }
 
-        const uniqueNamesArray = Array.from(uniqueNames);
-        for (let n = 0; n < uniqueNamesArray.length; n++) {
-            const name = uniqueNamesArray[n];
-            const eventTableMemberR = document.createElement('tr');
-            const eventTableMember = document.createElement('td');
-            eventTableMember.classList.add('event-table-member');
-            eventTableMember.textContent = name;
-            eventTableMemberR.appendChild(eventTableMember);
-            eventTable.appendChild(eventTableMemberR);
+    const uniqueNamesArray = Array.from(uniqueNames);
+    for (let n = 0; n < uniqueNamesArray.length; n++) {
+        const name = uniqueNamesArray[n];
+        const eventTableMemberR = document.createElement('tr');
+        const eventTableMember = document.createElement('td');
+        eventTableMember.classList.add('event-table-member');
+        eventTableMember.textContent = name;
+        eventTableMemberR.appendChild(eventTableMember);
+        eventTable.appendChild(eventTableMemberR);
             
-        }
-            //msss
-        
+    }
 
-        const eventInput = document.createElement('input');
-        eventInput.classList.add('event-input');
-        eventInput.setAttribute('type', 'text');
+    const eventInput = document.createElement('input');
+    eventInput.classList.add('event-input');
+    eventInput.setAttribute('type', 'text');
 
-        const eventDelButton = document.createElement('img');
-        eventDelButton.classList.add('event-btn-delete');
-        eventDelButton.style.width = "20px";
-        eventDelButton.style.height = "20px";
-        eventDelButton.addEventListener('click', (e) => deleteEvent(e,eventID));
-        eventDelButton.setAttribute('src','icones/trash-can-solid.svg');
+    const eventDelButton = document.createElement('img');
+    eventDelButton.classList.add('event-btn-delete');
+    eventDelButton.style.width = "20px";
+    eventDelButton.style.height = "20px";
+    eventDelButton.addEventListener('click', (e) => deleteEvent(e,eventID));
+    eventDelButton.setAttribute('src','icones/trash-can-solid.svg');
 
     cardEvent.appendChild(eventTitle);
     cardEvent.appendChild(eventParagraph);
