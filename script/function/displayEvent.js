@@ -9,27 +9,23 @@ function displayEvent(eventList) {
         let eventID = event.id;
 
         const eventTitle = document.createElement('h3');
-        eventTitle.textContent = `Nom de l'événement ${event.name}`;
+        eventTitle.textContent = `${event.name}`;
         eventTitle.classList.add('event-title');
 
         const eventParagraph = document.createElement('p');
-        eventParagraph.textContent = `Description : ${event.description}`;
+        eventParagraph.textContent = `${event.description}`;
         eventParagraph.classList.add('event-paragraph');
 
         //Lignes ajoutées/modifiées par Virginie pour faire apparaitre le bouton d'edit des cartes, 
         //afin de pouvoir tester la fonctionalité.
         //A supprimer après :
-        const cardEdit = document.createElement('a');
+        const cardEdit = document.createElement('img');
         cardEdit.classList.add('card-edit');
-        
-        cardEdit.style.width = "50px";
-        cardEdit.style.height = "50px";
-        cardEdit.style.backgroundColor = "blue";
+        cardEdit.style.width = "20px";
+        cardEdit.style.height = "20px";
         cardEdit.addEventListener('click', (e) => editEvent(e,eventID));
-        
-        cardEdit.textContent = 'Modify';
+        cardEdit.setAttribute('src','icones/pencil-solid.svg')
         //Fin des lignes ajoutées/modifiées par Virginie
-
 
         // const cardEdit = document.createElement('a');
         // cardEdit.classList.add('card-edit');

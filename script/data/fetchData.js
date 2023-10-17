@@ -101,7 +101,7 @@ export async function deleteEvent(id){
 //{ name: string (optional), author: string (optional), description: string (optional) }
 export async function patchEvents(id, eventObject){
     try{
-        console.log(JSON.stringify(eventObject));
+        //console.log(JSON.stringify(eventObject));
         let promise = await fetch(`http://localhost:3000/api/events/${id}/`,{
             method: 'PATCH',
             headers : {

@@ -1,9 +1,9 @@
 [
   {
     "id": "8bb74cb3fdb6",
-    "name": "Nom de l'événement Test PATCH db",
+    "name": "Test PATCH final",
     "author": "Virginie",
-    "description": "Description : I try to post a new event on the API",
+    "description": "Is it clean?",
     "dates": [
       "2023-03-17",
       "2024-03-18",
@@ -11,8 +11,8 @@
       "2024-03-22"
     ],
     "created_at": "2023-10-16T08:05:04.854Z",
-    "num_modification": 1,
-    "last_modification": "2023-10-17T11:05:20.138Z",
+    "num_modification": 7,
+    "last_modification": "2023-10-17T11:18:37.767Z",
     "attendees": []
   },
   {
