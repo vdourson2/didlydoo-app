@@ -1,3 +1,4 @@
+import { editEvent } from "./editEvent";
 
 const eventsContainer = document.getElementById('events-container');
 
@@ -15,11 +16,25 @@ function displayEvent(eventList) {
         eventParagraph.textContent = `Description : ${event.description}`;
         eventParagraph.classList.add('event-paragraph');
 
+        //Lignes ajoutées/modifiées par Virginie pour faire apparaitre le bouton d'edit des cartes, 
+        //afin de pouvoir tester la fonctionalité.
+        //A supprimer après :
         const cardEdit = document.createElement('a');
         cardEdit.classList.add('card-edit');
+        
+        cardEdit.style.width = "50px";
+        cardEdit.style.height = "50px";
+        cardEdit.style.backgroundColor = "blue";
+        cardEdit.addEventListener('click', (e) => editEvent(e,eventID));
+        
         cardEdit.textContent = 'Modify';
-        cardEdit.setAttribute('href', `./modifyEvent.html?id=${eventID}`);
+        //Fin des lignes ajoutées/modifiées par Virginie
 
+
+        // const cardEdit = document.createElement('a');
+        // cardEdit.classList.add('card-edit');
+        // cardEdit.textContent = 'Modify';
+        // cardEdit.setAttribute('href', `./modifyEvent.html?id=${eventID}`);
 
         const eventTable = document.createElement('table');
         eventTable.classList.add('event-table');
