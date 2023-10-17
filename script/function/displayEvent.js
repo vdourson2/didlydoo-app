@@ -4,9 +4,9 @@ function displayEvent(eventList) {
     
     eventList.forEach(event => {
 
-        let eventID = event.id;
-        const cardEvent = document.createElement('div');
-        cardEvent.classList.add('card-event');
+    let eventID = event.id;
+    const cardEvent = document.createElement('div');
+    cardEvent.classList.add('card-event');
 
     const eventTitle = document.createElement("h3");
     eventTitle.textContent = `Nom de l'événement ${event.name}`;
@@ -26,49 +26,52 @@ function displayEvent(eventList) {
 
     const eventTableR = document.createElement('tr');
     eventTableR.classList.add('event-table-r');
+    eventTable.appendChild(eventTableR)
 
     const eventTableR2 = document.createElement('tr');
     eventTableR2.classList.add('event-table-r');
+    eventTable.appendChild(eventTableR2)
 
     const eventTableR3 = document.createElement('tr');
     eventTableR3.classList.add('event-table-r');
+    eventTable.appendChild(eventTableR3)
 
     const eventTableH1 = document.createElement("th");
     eventTableH1.classList.add("event-table-h");
     eventTableH1.textContent = "Nom";
     eventTableR.appendChild(eventTableH1);
 
-        const eventTableCell = document.createElement('td');
-        eventTableCell.classList.add('event-table-c');
-        eventTableCell.textContent =` ${event.author}`;
-        eventTableCell.style.textDecoration = "underline";
-        eventTableR2.appendChild(eventTableCell);
+    const eventTableCell = document.createElement('td');
+    eventTableCell.classList.add('event-table-c');
+    eventTableCell.textContent =` ${event.author}`;
+    eventTableCell.style.textDecoration = "underline";
+    eventTableR2.appendChild(eventTableCell);
 
-        const uniqueNames = new Set();
+    const uniqueNames = new Set();
          
 
-        for (let i = 0; i < event.dates.length; i++) {
-            const date = event.dates[i];
-            const eventTableDate = document.createElement('th');
-            eventTableDate.classList.add('event-table-h');
-            eventTableDate.textContent = date.date;
-            eventTableR.appendChild(eventTableDate);
+    for (let i = 0; i < event.dates.length; i++) {
+        const date = event.dates[i];
+        const eventTableDate = document.createElement('th');
+        eventTableDate.classList.add('event-table-h');
+        eventTableDate.textContent = date.date;
+        eventTableR.appendChild(eventTableDate);
 
-            for (let j = 0; j < date.attendees.length; j++) {
-                const attendee = date.attendees[j];
-                uniqueNames.add(attendee.name); 
+        for (let j = 0; j < date.attendees.length; j++) {
+            const attendee = date.attendees[j];
+            uniqueNames.add(attendee.name); 
                 
-            }
-            const radioContainer = document.createElement('td');
-            const radio1 = document.createElement('input');
-            radio1.setAttribute('type', 'radio');
-            radio1.setAttribute('name', `${name}-avaible`); // Utilisez le nom comme identifiant unique pour les boutons radio
-            const radio2 = document.createElement('input');
-            radio2.setAttribute('type', 'radio');
-            radio2.setAttribute('name', `${name}-away`); // Utilisez le nom comme identifiant unique pour les boutons radio
-            radioContainer.appendChild(radio1);
-            radioContainer.appendChild(radio2);
-            eventTableR3.appendChild(radioContainer);
+        }
+        const radioContainer = document.createElement('td');
+        const radio1 = document.createElement('input');
+        radio1.setAttribute('type', 'radio');
+        radio1.setAttribute('name', `${name}-avaible`); // Utilisez le nom comme identifiant unique pour les boutons radio
+        const radio2 = document.createElement('input');
+        radio2.setAttribute('type', 'radio');
+        radio2.setAttribute('name', `${name}-away`); // Utilisez le nom comme identifiant unique pour les boutons radio
+        radioContainer.appendChild(radio1);
+        radioContainer.appendChild(radio2);
+        eventTableR3.appendChild(radioContainer);
         }
         const uniqueNamesArray = Array.from(uniqueNames);
         for (let n = 0; n < uniqueNamesArray.length; n++) {
