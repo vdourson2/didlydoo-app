@@ -72,7 +72,7 @@ function displayEvent(eventList) {
       radio2.setAttribute("name", `${name}-away`); // Utilisez le nom comme identifiant unique pour les boutons radio
       radioContainer.appendChild(radio1);
       radioContainer.appendChild(radio2);
-      eventTableR3.appendChild(radioContainer);
+      eventTableR2.appendChild(radioContainer);
     }
 
     const uniqueNamesArray = Array.from(uniqueNames);
@@ -85,6 +85,7 @@ function displayEvent(eventList) {
       eventTableMemberR.appendChild(eventTableMember);
       eventTable.appendChild(eventTableMemberR);
     }
+    //msss
 
     const eventInput = document.createElement("input");
     eventInput.classList.add("event-input");
